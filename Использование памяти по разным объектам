@@ -1,6 +1,6 @@
  ## Использование памяти в разрезе БД
 
-```qsl
+```sql
 	WITH AggregateBufferPoolUsage
 	AS
 	(SELECT DB_NAME(database_id) AS [Database Name],
@@ -16,7 +16,7 @@
 ```
 
 Использование памяти по таблицам
-```qsl	
+```sql	
   SELECT
 	objects.name AS object_name,
 	objects.type_desc AS object_type_description,
@@ -39,7 +39,7 @@
   ```
 
 Использование памяти по индексам
-```qsl
+```sql
 	SELECT
 		indexes.name AS index_name,
 		objects.name AS object_name,
