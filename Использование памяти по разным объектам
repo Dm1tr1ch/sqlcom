@@ -1,4 +1,4 @@
- ## Использование памяти в разрезе БД
+
 
 ```sql
 	WITH AggregateBufferPoolUsage
@@ -36,7 +36,7 @@
 	GROUP BY objects.name,
 			 objects.type_desc
 	ORDER BY COUNT(*) DESC;
-  ```
+ ```
 
 Использование памяти по индексам
 ```sql
@@ -64,4 +64,4 @@
 			 objects.name,
 			 objects.type_desc
 	ORDER BY COUNT(*) DESC;
-  ```
+ ```
