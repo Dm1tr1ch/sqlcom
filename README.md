@@ -1,5 +1,6 @@
 ### В помощь
-[Удобный сервис для публикации кода в интернете (pastebin)](http://sqlcom.ru/dba-tools/share-your-code-in-pastebin/) </br>
+[Удобный сервис для публикации кода в интернете (pastebin)](http://sqlcom.ru/dba-tools/share-your-code-in-pastebin/) </br>помощь
+[Удобный сервис для публикации плана запроса в интернете](http://sqlcom.ru/helpful-and-interesting/paste-the-plan/) </br>
 
 ### Готовые скрипты:
 [Используй PowerShell для управления SQL Server (dbatools)](http://sqlcom.ru/scripts/dbatools/ "Используй PowerShell для управления SQL Server (dbatools)") </br>
