@@ -1,5 +1,3 @@
-test
-
 ### В помощь
 [Удобный сервис для публикации кода в интернете (pastebin)](http://sqlcom.ru/dba-tools/share-your-code-in-pastebin/) </br>
 
