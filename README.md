@@ -1,3 +1,6 @@
+### Книги
+[Книги](http://sqlcom.ru/category/books/) </br>
+
 ### В помощь
 [Удобный сервис для публикации кода в интернете (pastebin)](http://sqlcom.ru/dba-tools/share-your-code-in-pastebin/) </br>
 [Удобный сервис для публикации плана запроса в интернете](http://sqlcom.ru/helpful-and-interesting/paste-the-plan/) </br>
