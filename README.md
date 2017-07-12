@@ -1,5 +1,5 @@
 ### Книги
-[Книги](http://sqlcom.ru/category/books/) </br>
+[Список книг на русском и английском языке](http://sqlcom.ru/category/books/) </br>
 
 ### В помощь
 [Удобный сервис для публикации кода в интернете (pastebin)](http://sqlcom.ru/dba-tools/share-your-code-in-pastebin/) </br>
