@@ -12,4 +12,11 @@
 [Поиск проблем вашего SQL Server (sp_Blitz)](http://sqlcom.ru/scripts/sp_blitz/)</br>
 [Автоматизация обслуживания SQL Server (ola hallengren)](http://sqlcom.ru/scripts/meintenance-from-ola-hallengren/)</br>
 
+### Контакты
 
+[Сайт проекта](http://sqlcom.ru/) </br>
+[Telegram](https://telegram.me/sqlcom) </br>
+[Youtube](https://www.youtube.com/channel/UCE0_rcbKAtw51y0b6K6tgGg) </br>
+[Vk](https://vk.com/sqlcom) </br>
+[Facebook](https://www.facebook.com/sqlcom) </br>
+[Twitter](https://twitter.com/sqlcom) </br>
