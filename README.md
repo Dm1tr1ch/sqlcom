@@ -20,7 +20,3 @@
 [Vk](https://vk.com/sqlcom) </br>
 [Facebook](https://www.facebook.com/sqlcom) </br>
 [Twitter](https://twitter.com/sqlcom) </br>
-
-
-
-test
