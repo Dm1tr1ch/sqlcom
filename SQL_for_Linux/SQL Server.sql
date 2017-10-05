@@ -89,4 +89,4 @@
 	https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/	
 	
 	-- Top 10 Linux Commands for SQL Server DBAs
-		https://www.mssqltips.com/sqlservertip/4816/top-10-linux-commands-for-sql-server-dbas/
+		https://www.mssqltips.com/sqlservertip/4816/top-10-linux-commands-for-sql-server-dbas/ 
