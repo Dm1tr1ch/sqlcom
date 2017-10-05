@@ -1,7 +1,7 @@
--- Установка
-	-- Требования
-		- Минимум 3250 оперативной памяти, лучше 4 Гб
-		- 4 Гб места на диске
+п»ї-- РЈСЃС‚Р°РЅРѕРІРєР°
+	-- РўСЂРµР±РѕРІР°РЅРёСЏ
+		- РњРёРЅРёРјСѓРј 3250 РѕРїРµСЂР°С‚РёРІРЅРѕР№ РїР°РјСЏС‚Рё, Р»СѓС‡С€Рµ 4 Р“Р±
+		- 4 Р“Р± РјРµСЃС‚Р° РЅР° РґРёСЃРєРµ
 
 	-- Linux
 		https://docs.microsoft.com/en-us/sql/linux/
@@ -10,12 +10,12 @@
 	-- Red Hat
 		https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-red-hat
 	
-	-- Пакетов (sqlcmd и odbc)
-		1. С помощью pscp копируем в любую дирректорию файлы mssql-tools (https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools#ubuntu)
-		2. Запускаем "установку"
+	-- РџР°РєРµС‚РѕРІ (sqlcmd Рё odbc)
+		1. РЎ РїРѕРјРѕС‰СЊСЋ pscp РєРѕРїРёСЂСѓРµРј РІ Р»СЋР±СѓСЋ РґРёСЂСЂРµРєС‚РѕСЂРёСЋ С„Р°Р№Р»С‹ mssql-tools (https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools#ubuntu)
+		2. Р—Р°РїСѓСЃРєР°РµРј "СѓСЃС‚Р°РЅРѕРІРєСѓ"
 			sudo yum localinstall mssql-tools.rpm
 			sudo yum localinstall msodbcsql.rpm
-		3. Далее выполняем 
+		3. Р”Р°Р»РµРµ РІС‹РїРѕР»РЅСЏРµРј 
 			https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat
 			
 	-- SQL Server Agent
@@ -23,34 +23,34 @@
 		yum info mssql-server-agent
 		sudo yum install mssql-server-agent
 		
-	-- Именованный экземпляр
-		Рекомендуют использовать контейнер
+	-- РРјРµРЅРѕРІР°РЅРЅС‹Р№ СЌРєР·РµРјРїР»СЏСЂ
+		Р РµРєРѕРјРµРЅРґСѓСЋС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РєРѕРЅС‚РµР№РЅРµСЂ
 
--- Запуск/остановка SQL Server
+-- Р—Р°РїСѓСЃРє/РѕСЃС‚Р°РЅРѕРІРєР° SQL Server
 	sudo systemctl stop mssql-server
 	sudo systemctl start mssql-server
 	
--- Обновление
+-- РћР±РЅРѕРІР»РµРЅРёРµ
 	sudo yum update mssql-server
 
--- Uninstall / удаление
+-- Uninstall / СѓРґР°Р»РµРЅРёРµ
 	sudo yum remove mssql-server
 	
-	-- Возможно придётся чистить руками остатки
+	-- Р’РѕР·РјРѕР¶РЅРѕ РїСЂРёРґС‘С‚СЃСЏ С‡РёСЃС‚РёС‚СЊ СЂСѓРєР°РјРё РѕСЃС‚Р°С‚РєРё
 		sudo rm -rf /var/opt/mssql/	
 
--- По-умолчанию БД размещены
+-- РџРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ Р‘Р” СЂР°Р·РјРµС‰РµРЅС‹
 	/var/opt/mssql/data	
 			
--- Получить информацию о SQL Server
-	systemctl status mssql-server -- активность службы
-	yum info mssql-server -- версию
-	ps -ef | grep -v grep | grep sql -- Посмотреть запущенные процессы sql	
-	systemctl | grep sql -- Посмотреть запущенные "службы" sql / статус
+-- РџРѕР»СѓС‡РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ SQL Server
+	systemctl status mssql-server -- Р°РєС‚РёРІРЅРѕСЃС‚СЊ СЃР»СѓР¶Р±С‹
+	yum info mssql-server -- РІРµСЂСЃРёСЋ
+	ps -ef | grep -v grep | grep sql -- РџРѕСЃРјРѕС‚СЂРµС‚СЊ Р·Р°РїСѓС‰РµРЅРЅС‹Рµ РїСЂРѕС†РµСЃСЃС‹ sql	
+	systemctl | grep sql -- РџРѕСЃРјРѕС‚СЂРµС‚СЊ Р·Р°РїСѓС‰РµРЅРЅС‹Рµ "СЃР»СѓР¶Р±С‹" sql / СЃС‚Р°С‚СѓСЃ
 
--- Конфиг	
-	/opt/mssql/bin/mssql-conf list -- Посмотреть все параметры конфига
-		-- Возможные опции
+-- РљРѕРЅС„РёРі	
+	/opt/mssql/bin/mssql-conf list -- РџРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ РїР°СЂР°РјРµС‚СЂС‹ РєРѕРЅС„РёРіР°
+		-- Р’РѕР·РјРѕР¶РЅС‹Рµ РѕРїС†РёРё
 			set
 			unset
 			traceflag
@@ -64,29 +64,29 @@
 			enable-service
 			disable-service		
 		
-	-- Изменить COLLATION
-		1. Перед запуском надо отключить все пользовательские БД, иначе не работает
+	-- РР·РјРµРЅРёС‚СЊ COLLATION
+		1. РџРµСЂРµРґ Р·Р°РїСѓСЃРєРѕРј РЅР°РґРѕ РѕС‚РєР»СЋС‡РёС‚СЊ РІСЃРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ Р‘Р”, РёРЅР°С‡Рµ РЅРµ СЂР°Р±РѕС‚Р°РµС‚
 		sudo /opt/mssql/bin/mssql-conf set-collation
 			
 -- sqlcmd
-	запускать с параметром -W, чтобы было более менее удобно читать вывод	
+	Р·Р°РїСѓСЃРєР°С‚СЊ СЃ РїР°СЂР°РјРµС‚СЂРѕРј -W, С‡С‚РѕР±С‹ Р±С‹Р»Рѕ Р±РѕР»РµРµ РјРµРЅРµРµ СѓРґРѕР±РЅРѕ С‡РёС‚Р°С‚СЊ РІС‹РІРѕРґ	
 	
--- Мониторинг
+-- РњРѕРЅРёС‚РѕСЂРёРЅРі
 	top (https://www.mssqltips.com/sqlservertip/4683/linux-administration-for-sql-server-dbas-checking-cpu-usage/)
-	iostat –d 4 (https://www.mssqltips.com/sqlservertip/4867/linux-administration-for-sql-server-dbas-checking-disk-io/)
+	iostat вЂ“d 4 (https://www.mssqltips.com/sqlservertip/4867/linux-administration-for-sql-server-dbas-checking-disk-io/)
 		-x
 	iotop
-	netstat –i -- Информация по пакетам сети
-	netstat -ltu -- Информация по открытым портам 
+	netstat вЂ“i -- РРЅС„РѕСЂРјР°С†РёСЏ РїРѕ РїР°РєРµС‚Р°Рј СЃРµС‚Рё
+	netstat -ltu -- РРЅС„РѕСЂРјР°С†РёСЏ РїРѕ РѕС‚РєСЂС‹С‚С‹Рј РїРѕСЂС‚Р°Рј 
 	
-	-- Мониторинг SQL Server на Linux
+	-- РњРѕРЅРёС‚РѕСЂРёРЅРі SQL Server РЅР° Linux
 		https://blogs.msdn.microsoft.com/sqlcat/2017/07/03/how-the-sqlcat-customer-lab-is-monitoring-sql-on-linux/
 	
 	-- PssDiag for Linux
 		https://blogs.msdn.microsoft.com/sqlcat/2017/08/11/collecting-performance-data-with-pssdiag-for-sql-server-on-linux/
 
--- Дополнительная литература
+-- Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ Р»РёС‚РµСЂР°С‚СѓСЂР°
 	https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/	
 	
 	-- Top 10 Linux Commands for SQL Server DBAs
-		https://www.mssqltips.com/sqlservertip/4816/top-10-linux-commands-for-sql-server-dbas/ 
+		https://www.mssqltips.com/sqlservertip/4816/top-10-linux-commands-for-sql-server-dbas/
